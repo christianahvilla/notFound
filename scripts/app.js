@@ -26,7 +26,7 @@
 
     app.loadFriends = function() {
         document.body.classList.add("loading");
-        app.news = [];
+        app.users = [];
 
         for(var j=0; j< app.names.length; j++){
           var url = 'https://api.github.com/users/'+app.names[j];
@@ -53,7 +53,7 @@
     }
 
     app.init = function() {
-        app.users=null;
+        app.users = [];
         app.loadFriends();
     }
 
