@@ -11,9 +11,10 @@
     app.displayFriens = function() {
         // remove current news
         app.container.innerText = "";
+        console.log('Aqui');
         app.users.forEach(function(item) {
             var article = app.articleTemplate.cloneNode(true);
-            console.log(item.name);
+            console.log('Aqui2');
             article.querySelector('.avatar').src = item.avatar_url || '';
             article.querySelector('.name').textContent = item.name;
             article.querySelector('.bio').textContent = item.bio;
@@ -27,7 +28,8 @@
     app.loadFriends = function() {
         document.body.classList.add("loading");
         app.users = [];
-
+        console.log('Antes');
+        console.log(app.users);
         for(var j=0; j< app.names.length; j++){
           var url = 'https://api.github.com/users/'+app.names[j];
 
@@ -49,11 +51,12 @@
           xhttp.open("GET", url, true);
           xhttp.send();
         };
+        console.log('Despues');
+        console.log(app.users);
         app.displayFriens();
     }
 
     app.init = function() {
-        app.users = [];
         app.loadFriends();
     }
 
