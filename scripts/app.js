@@ -11,27 +11,20 @@
     app.displayFriens = function() {
         // remove current news
         app.container.innerText = "";
-        console.log('Aqui');
-        console.log(app.users);
-        console.log(app.users.length);
         app.users.forEach(function(item) {
             var article = app.articleTemplate.cloneNode(true);
-            console.log('Aqui2');
             article.querySelector('.avatar').src = item.avatar_url || '';
             article.querySelector('.name').textContent = item.name;
             article.querySelector('.bio').textContent = item.bio;
             article.removeAttribute('hidden');
             app.container.appendChild(article);
         });
-
+        app.users= [];
         document.body.classList.remove("loading");
     }
 
     app.loadFriends = function() {
         document.body.classList.add("loading");
-        app.users = [];
-        console.log('Antes');
-        console.log(app.users);
         for(var j=0; j< app.names.length; j++){
           var url = 'https://api.github.com/users/'+app.names[j];
 
@@ -43,7 +36,7 @@
                       });
                   }
               });
-          }
+          };
           var xhttp = new XMLHttpRequest();
           xhttp.onreadystatechange = function() {
               if (this.readyState == 4 && this.status == 200) {
@@ -53,9 +46,9 @@
           xhttp.open("GET", url, true);
           xhttp.send();
         };
-        console.log('Despues');
-        console.log(app.users);
-        app.displayFriens();
+        setTimeout(function() {
+          app.displayFriens();
+        },1000);
     }
 
     app.init = function() {
