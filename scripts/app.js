@@ -12,6 +12,8 @@
         // remove current news
         app.container.innerText = "";
         console.log('Aqui');
+        console.log(app.users);
+        console.log(app.users.length);
         app.users.forEach(function(item) {
             var article = app.articleTemplate.cloneNode(true);
             console.log('Aqui2');
