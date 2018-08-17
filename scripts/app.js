@@ -53,7 +53,7 @@
     }
 
     app.init = function() {
-      console.log('AQUI ENTRA');
+        app.users=null;
         app.loadFriends();
     }
 
