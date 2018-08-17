@@ -1,0 +1,20 @@
+{
+  "name": "Git Friends",
+  "short_name": "Git Friends",
+  "icons": [
+    {
+      "src": "./imgs/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./imgs/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#23ABF7",
+  "theme_color": "#23ABF7"
+}
