@@ -33,6 +33,7 @@
                   if (response) {
                       response.json().then(function updateFromCache(json) {
                           app.users.push(json);
+                          console.log('entra a cache');
                       });
                   }
               });
@@ -41,6 +42,7 @@
           xhttp.onreadystatechange = function() {
               if (this.readyState == 4 && this.status == 200) {
                   app.users.push(JSON.parse(this.response));
+                  console.log('entra a cache');
               }
           };
           xhttp.open("GET", url, true);
