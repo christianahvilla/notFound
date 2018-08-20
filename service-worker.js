@@ -6,8 +6,7 @@ var urlsToCache = [
   './index.html',
   './scripts/app.js',
   './styles/style.css',
-  './imgs/logo.png',
-  './imgs/loader.svg',
+  './imgs/logo.png',  
   './imgs/reload.svg'
 ];
 
