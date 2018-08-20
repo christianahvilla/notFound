@@ -33,6 +33,13 @@ section.cards{
   opacity: 1;
   transition: all .3s ease;
 }
+
+section.card:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -10px, 0);
+}
+
+
 .loading section.cards{
   max-height: 0;
   opacity: 0;
