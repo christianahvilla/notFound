@@ -19,11 +19,11 @@
             article.removeAttribute('hidden');
             app.container.appendChild(article);
         });
-        app.users= [];
         document.body.classList.remove("loading");
     }
 
     app.loadFriends = function() {
+      app.users= [];
         document.body.classList.add("loading");
         for(var j=0; j< app.names.length; j++){
           var url = 'https://api.github.com/users/'+app.names[j];
