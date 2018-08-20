@@ -32,6 +32,8 @@ section.cards{
   max-height: auto;
   opacity: 1;
   transition: all .3s ease;
+  overflow: hidden;
+  transition: all .2s linear;
 }
 
 section.card:hover {
