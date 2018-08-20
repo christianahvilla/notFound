@@ -42,7 +42,7 @@
           xhttp.onreadystatechange = function() {
               if (this.readyState == 4 && this.status == 200) {
                   app.users.push(JSON.parse(this.response));
-                  console.log('entra a cache');
+                  console.log('entra peticion');
               }
           };
           xhttp.open("GET", url, true);
